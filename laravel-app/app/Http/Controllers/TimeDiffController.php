@@ -39,12 +39,12 @@ class TimeDiffController extends Controller
         $interval = $now->diff($inputDate);
 
         return response()->json([
-            '年' => $interval->format('%Y'),
-            '月' => $interval->format('%m'),
-            '日' => $interval->format('%d'),
-            '時' => $interval->format('%H'),
-            '分' => $interval->format('%I'),
-            '日数' => $interval->days + 1,
+            'year' => $interval->format('%Y'),
+            'month' => $interval->format('%m'),
+            'day' => $interval->format('%d'),
+            'hour' => $interval->format('%H'),
+            'minutes' => $interval->format('%I'),
+            'days' => $interval->days + 1,
         ]);
     }
 }
